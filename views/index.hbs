@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./inc/style.css">
+
     <title>Document</title>
 </head>
 
@@ -11,17 +13,19 @@
     {{>header}}
     <br>
 
-    <form action="/weather" method="POST">
+    <div class="form">
+        <form action="/weather" method="POST">
 
-        <label for="results">Get Weather your weather</label>
-        <br>
-        <input type="text" id="theCountry" name="theCountry" placeholder="ie UK" required />
-        <br>
-        <input type="text" id="theCity" name="theCity" placeholder="ie London" required />
-        <br>
-        <button type="submit">Go --></button>
+            <label for="results">Enter country and city</label>
+            <br>
+            <input type="text" id="theCountry" name="theCountry" placeholder="ie UK" required />
+            <br>
+            <input type="text" id="theCity" name="theCity" placeholder="ie London" required />
+            <br>
+            <button type="submit">Ge weather --></button>
 
-    </form>
+        </form>
+    </div>
 
 </body>
 

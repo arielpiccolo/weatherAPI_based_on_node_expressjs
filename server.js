@@ -9,9 +9,9 @@ const request = require('request');
 const credentials = require('./credentials')
 
 
-
 // init
 const app = express();
+const publicFolder = path.join(__dirname, './views/inc')
 // create viewPath variable
 const viewsPath = path.join(__dirname, './views');
 //  declare the path to partialPath
@@ -24,6 +24,8 @@ app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 app.use(express.urlencoded());
 app.use(express.json());
+// fixed path to public folder
+app.use(express.static(publicFolder));
 
 // openWeather data
 
